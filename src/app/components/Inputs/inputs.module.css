@@ -3,5 +3,5 @@
 }
 
 .error_text {
-  @apply error text-sm;
+  @apply text-sm;
 }
