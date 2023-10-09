@@ -1,0 +1,19 @@
+.navbar_container {
+  @apply flex justify-between items-center mb-6;
+}
+
+.brand_text {
+  @apply text-2xl;
+}
+
+.brand_link {
+  @apply flex;
+}
+
+.navbar_right {
+  @apply flex space-x-3 items-center;
+}
+
+.menu_item {
+  @apply block px-4 py-2 text-gray-800 hover:bg-gray-100;
+}

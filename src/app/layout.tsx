@@ -1,3 +1,4 @@
+import { QueryContextProvider } from "@/context/query.contenxt";
 import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
@@ -16,7 +17,15 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <head>
+        <link
+          href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
+          rel="stylesheet"
+        ></link>
+      </head>
+      <body className={inter.className + " px-8 sm:px-20 py-2"}>
+        <QueryContextProvider>{children}</QueryContextProvider>
+      </body>
     </html>
   );
 }

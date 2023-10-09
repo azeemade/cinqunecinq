@@ -1,0 +1,11 @@
+.alert {
+  @apply fixed items-center z-50 flex right-2 bottom-2 bg-[#f0f0f0] border border-[#ccc] px-6 py-5 rounded  shadow-md max-w-xs;
+}
+
+.alert_button {
+  @apply ml-auto box-content rounded-none border-none p-1 text-stone-900 opacity-50 hover:text-stone-900 hover:no-underline hover:opacity-75 focus:opacity-100 focus:shadow-none focus:outline-none;
+}
+
+.alert_message {
+  @apply m-0 text-sm;
+}

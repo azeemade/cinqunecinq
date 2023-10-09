@@ -1,0 +1,11 @@
+.search_container {
+  @apply relative mt-1;
+}
+
+.search_input {
+  @apply pr-10;
+}
+
+.search_button {
+  @apply w-7 h-7 text-center text-xl absolute top-2 right-2 text-gray-400;
+}

@@ -1,0 +1,11 @@
+.search_page_container {
+  @apply mt-16;
+}
+
+.search_page_background {
+  @apply bg-[url('/images/logo/515logo.png')] w-full h-8 md:h-16 bg-contain bg-repeat;
+}
+
+.search_page_searchbar {
+  @apply absolute w-[85%] md:w-[89%] top-[136px] md:top-[160px];
+}
