@@ -1,14 +1,12 @@
 "use client";
 
+import { useState } from "react";
 import styles from "./navbar.module.css";
 import { Pacifico } from "next/font/google";
-import { currentView } from "@/utils/helpers/current-view";
-
+import { CurrentView } from "@/utils/helpers/current-view";
 import Link from "next/link";
 import Image from "next/image";
-import { Button, Search } from "..";
-import { useState } from "react";
-import Dropdown from "../Dropdown";
+import { Button, Search, Dropdown } from "..";
 
 const pacifico = Pacifico({
   weight: "400",
@@ -16,7 +14,7 @@ const pacifico = Pacifico({
   subsets: ["cyrillic"],
 });
 
-const index = () => {
+const Navbar = () => {
   const [dropdownState, setDropdownState] = useState(false);
   return (
     <div className={styles.navbar_container}>
@@ -53,17 +51,17 @@ const index = () => {
               <Image
                 src={
                   "https://ui-avatars.com/api/?name=" +
-                  currentView() +
+                  CurrentView() +
                   "&background=random&rounded=true"
                 }
                 alt={
                   "navigate to " +
-                  (currentView() == "admin" ? "guest" : "admin") +
+                  (CurrentView() == "admin" ? "guest" : "admin") +
                   " view"
                 }
                 title={
                   "navigate to " +
-                  (currentView() == "admin" ? "guest" : "admin") +
+                  (CurrentView() == "admin" ? "guest" : "admin") +
                   " view"
                 }
                 width={32}
@@ -75,38 +73,17 @@ const index = () => {
             isOpen={dropdownState}
             content={
               <Link
-                href={currentView() == "admin" ? "/" : "/admin"}
+                href={CurrentView() == "admin" ? "/" : "/admin"}
                 className={styles.menu_item}
               >
-                {"Go to " + (currentView() == "admin" ? "guest" : "admin")}
+                {"Go to " + (CurrentView() == "admin" ? "guest" : "admin")}
               </Link>
             }
           />
-          {/* <Link href={currentView() == "admin" ? "/" : "/admin"}>
-            <Image
-              src={
-                "https://ui-avatars.com/api/?name=" +
-                currentView() +
-                "&background=random&rounded=true"
-              }
-              alt={
-                "navigate to " +
-                (currentView() == "admin" ? "guest" : "admin") +
-                " view"
-              }
-              title={
-                "navigate to " +
-                (currentView() == "admin" ? "guest" : "admin") +
-                " view"
-              }
-              width={32}
-              height={32}
-            />
-          </Link> */}
         </div>
       </div>
     </div>
   );
 };
 
-export default index;
+export default Navbar;

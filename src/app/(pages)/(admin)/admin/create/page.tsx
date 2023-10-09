@@ -12,7 +12,7 @@ import React, { useState, useEffect, ChangeEvent, FC } from "react";
 import { Editor, Toolbar } from "@wangeditor/editor-for-react";
 import { IDomEditor, IEditorConfig, IToolbarConfig } from "@wangeditor/editor";
 import Image from "next/image";
-import Alert from "@/app/components/Alert";
+import Alert from "@/app/components/Alert/Alert";
 import { useBoundStore } from "@/app/store";
 
 const Page = () => {

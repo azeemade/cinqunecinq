@@ -9,7 +9,7 @@ type ButtonProps = {
   onClick?: (e: MouseEvent<any>) => void;
 };
 
-const index = (props: ButtonProps) => {
+const Button = (props: ButtonProps) => {
   const { style, content, onClick, type, disabled } = props;
   return (
     <button
@@ -23,4 +23,4 @@ const index = (props: ButtonProps) => {
   );
 };
 
-export default index;
+export default Button;

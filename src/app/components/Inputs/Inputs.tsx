@@ -14,7 +14,7 @@ interface InputProps {
   onChange: (e: ChangeEvent<HTMLInputElement>) => void;
 }
 
-const index: FC<InputProps> = ({
+const Inputs: FC<InputProps> = ({
   type,
   label,
   value,
@@ -44,4 +44,4 @@ const index: FC<InputProps> = ({
   );
 };
 
-export default index;
+export default Inputs;

@@ -1,4 +1,4 @@
-import React, { FC, useState } from "react";
+import React, { FC } from "react";
 import styles from "./alert.module.css";
 import { Button } from "..";
 import { useBoundStore } from "@/app/store";

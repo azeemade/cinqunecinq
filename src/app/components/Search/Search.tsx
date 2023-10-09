@@ -1,11 +1,11 @@
 import { ChangeEvent, MouseEvent } from "react";
+import styles from "./search.module.css";
 import { useBoundStore } from "../../store";
 import { Button, Inputs } from "..";
-import styles from "./search.module.css";
 import { usePathname, useRouter } from "next/navigation";
 import { useSearchParams } from "next/navigation";
 
-const index = () => {
+const Search = () => {
   const router = useRouter();
   const currentRoute = usePathname();
   const queryParams = useSearchParams();
@@ -55,4 +55,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default Search;
