@@ -39,7 +39,9 @@ const Inputs: FC<InputProps> = ({
         value={value}
         disabled={disabled}
       />
-      {error && <p className="error text-sm">Input filed can't be empty!</p>}
+      {error && (
+        <p className={styles.error_text}>Input filed can't be empty!</p>
+      )}
     </>
   );
 };
