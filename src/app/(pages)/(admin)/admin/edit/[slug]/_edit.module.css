@@ -1,0 +1,27 @@
+.article_title {
+  @apply placeholder:text-5xl text-5xl text-gray-400 font-bold h-16 placeholder:text-gray-400 placeholder:font-bold border-0 my-5 border-transparent !important;
+}
+
+.toolbar {
+  @apply border-b border-[#ccc];
+}
+
+.editor {
+  @apply h-[500px] overflow-y-hidden;
+}
+
+.create_header {
+  @apply flex space-x-3 justify-end mb-5;
+}
+
+.publish_button {
+  @apply bg-[#cb8b64] p-2 rounded text-white text-sm hover:text-[#f5ba7c] hover:border-[#f5ba7c] disabled:text-white;
+}
+
+.author {
+  @apply flex space-x-3 items-center text-sm;
+}
+
+.form_container {
+  @apply px-0 sm:px-40 pt-10;
+}

@@ -14,9 +14,7 @@ const Search = () => {
   const setSearch = useBoundStore((state) => state.setSearch);
 
   const search_value: string = queryParams.get("query") ?? "";
-  const shouldRenderSearchBar = !["/create", "/edit/[id]"].includes(
-    currentRoute
-  );
+  const shouldRenderSearchBar = ["/create"].includes(currentRoute);
 
   const handleSearch = (val: string) => {
     setSearch(val);

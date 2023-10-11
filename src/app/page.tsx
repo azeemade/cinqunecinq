@@ -1,9 +1,9 @@
-import Image from "next/image";
+import CardParent from "./components/Card/CardParent";
 
 export default function Home() {
   return (
-    <main>
-      <h1>Hello, Next.js!</h1>;
+    <main className="px-4 sm:px-[25rem]">
+      <CardParent />
     </main>
   );
 }

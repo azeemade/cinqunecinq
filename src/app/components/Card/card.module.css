@@ -1,0 +1,11 @@
+.link {
+  @apply underline  text-sm;
+}
+
+.card_parent {
+  @apply p-4 border border-gray-500 bg-gray-50 rounded mb-6;
+}
+
+.leading_text {
+  @apply text-5xl text-gray-400 font-bold h-16;
+}

@@ -14,16 +14,17 @@ import { IDomEditor, IEditorConfig, IToolbarConfig } from "@wangeditor/editor";
 import Image from "next/image";
 import Alert from "@/app/components/Alert/Alert";
 import { useBoundStore } from "@/app/store";
+import CurrentDate from "@/utils/helpers/currentdate";
+import { useRouter } from "next/navigation";
 
 const Page = () => {
   const [editor, setEditor] = useState<IDomEditor | null>(null);
   const [title, setTitle] = useState("");
-  // const [alert, setAlert] = useState(false);
   const [error, setError] = useState("");
   const [content, setContent] = useState("");
   const alert = useBoundStore((state) => state.alert);
   const setAlert = useBoundStore((state) => state.setAlert);
-
+  const router = useRouter();
   const ref = collection(firestore, "articles");
   const mutation = useFirestoreCollectionMutation(ref);
 
@@ -36,22 +37,25 @@ const Page = () => {
     } else {
       console.log(title, `"${content}"`);
 
-      const currentDate = new Date();
-      const currentYear = currentDate.getFullYear();
-      const currentMonth = currentDate.getMonth();
-      const currentDay = currentDate.getDate();
-
       let data: any = {
         title: title,
         slug: slugify(title),
         author_id: 1,
         id: Math.floor(Math.random() * 1000000),
         content: `"${content}"`,
-        created_at: `${currentYear}-${currentMonth + 1}-${currentDay}`,
-        updated_at: `${currentYear}-${currentMonth + 1}-${currentDay}`,
+        created_at: `${CurrentDate().currentYear}-${
+          CurrentDate().currentMonth + 1
+        }-${CurrentDate().currentDay}`,
+        updated_at: `${CurrentDate().currentYear}-${
+          CurrentDate().currentMonth + 1
+        }-${CurrentDate().currentDay}`,
       };
 
       mutation.mutate(data);
+
+      setTitle("");
+      setContent("");
+      router.push("/admin");
     }
   };
 
@@ -94,6 +98,7 @@ const Page = () => {
               type={"submit"}
               content="Publish"
               style={styles.publish_button}
+              disabled={mutation.isLoading}
             />
           </div>
           <Inputs

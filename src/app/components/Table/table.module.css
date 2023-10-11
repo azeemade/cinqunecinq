@@ -1,0 +1,46 @@
+.table_container {
+  @apply container mx-auto px-4 sm:px-8;
+}
+
+.table_container_inner {
+  @apply py-8;
+}
+
+.table_title {
+  @apply text-2xl font-semibold leading-tight;
+}
+
+.table_wrapper {
+  @apply -mx-4 sm:-mx-8 px-4 sm:px-8 py-4 overflow-x-auto;
+}
+
+.table_wrapper_inner {
+  @apply inline-block min-w-full shadow-md rounded-lg overflow-hidden;
+}
+
+.table {
+  @apply min-w-full leading-normal;
+}
+
+.tr_head {
+  @apply px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider;
+}
+
+.tr_head_action {
+  @apply px-5 py-3 border-b-2 border-gray-200 bg-gray-100;
+}
+
+.table_data {
+  @apply px-5 py-5 border-b border-gray-200 bg-white text-sm;
+}
+
+.author {
+  @apply flex space-x-3 items-center text-sm;
+}
+
+.menu_item {
+  @apply block px-4 py-2 text-gray-800 hover:bg-gray-100;
+}
+.link {
+  @apply underline hover:shadow-md p-2 hover:rounded mb-6;
+}

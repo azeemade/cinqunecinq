@@ -1,3 +1,4 @@
+import { Table } from "@/app/components";
 export default function Page() {
-  return <h1>Hello Admin, Next.js!</h1>;
+  return <Table />;
 }

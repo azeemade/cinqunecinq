@@ -1,0 +1,11 @@
+.comment_container {
+  @apply rounded-md border border-gray-500 bg-gray-300 px-5 py-3;
+}
+
+.name_input {
+  @apply border-0 border-b border-gray-500 p-1 w-full;
+}
+
+.comment_btn {
+  @apply bg-[#f6b97c] p-3 cursor-auto hover:border-[#ce9368];
+}

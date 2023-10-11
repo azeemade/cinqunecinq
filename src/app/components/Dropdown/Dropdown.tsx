@@ -3,11 +3,13 @@ import styles from "./dropdown.module.css";
 interface DropdownInterface {
   isOpen: boolean;
   content: any;
+  id?: string;
+  style?: string;
 }
 
-const Dropdown = ({ isOpen, content }: DropdownInterface) => {
+const Dropdown = ({ isOpen, content, id, style }: DropdownInterface) => {
   return (
-    <div className={styles.dropdown_container}>
+    <div id={id} className={styles.dropdown_container + " " + style}>
       {isOpen && (
         <div className={styles.dropdown_inner}>
           <div
