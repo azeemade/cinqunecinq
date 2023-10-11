@@ -22,6 +22,8 @@ const Comment: FC<CommentInterface> = ({ article_id }) => {
 
   const user = useBoundStore((state) => state.user);
   const setUser = useBoundStore((state) => state.setUser);
+  const ref = collection(firestore, "comments");
+  const mutation = useFirestoreCollectionMutation(ref);
 
   const handleSubmit = (e: any) => {
     e.preventDefault;
@@ -29,9 +31,6 @@ const Comment: FC<CommentInterface> = ({ article_id }) => {
     if (name === "" && comment === "") {
       setErrStatus(true);
     } else {
-      const ref = collection(firestore, "comments");
-      const mutation = useFirestoreCollectionMutation(ref);
-
       setUser({ ...user, name: name });
 
       let data: any = {

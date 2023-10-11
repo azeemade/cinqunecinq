@@ -17,7 +17,6 @@ import {
 import { firestore } from "@/services/firebaseService";
 import { useState } from "react";
 import { Button, Dropdown } from "..";
-import Link from "next/link";
 import { useBoundStore } from "@/app/store";
 import { useRouter } from "next/navigation";
 

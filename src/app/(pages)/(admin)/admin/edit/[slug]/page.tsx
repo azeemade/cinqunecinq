@@ -23,7 +23,7 @@ export default function Page({ params }: { params: { slug: string } }) {
     if (article === null) {
       redirect("/admin");
     }
-  }, []);
+  }, [article]);
 
   const [editor, setEditor] = useState<IDomEditor | null>(null);
   console.log(article);
